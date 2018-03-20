@@ -1,0 +1,3 @@
+*.pyc
+.idea/
+myapp/key.py

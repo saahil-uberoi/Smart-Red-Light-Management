@@ -1,0 +1,63 @@
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Traffic Data</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static 'jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <style>
+        body {
+            background: url("{% static 'images/bg.jpg' %}");
+        }
+        .container {
+            opacity: 0.92;
+            filter: alpha(opacity=92);
+            background-color:#000;
+            color:#ffffff;
+            margin: 0 auto;
+        }
+        .cam {
+            text-align: left;
+            padding: 1%;
+        }
+
+    </style>
+</head>
+<body align="center">
+
+    <div class="col-xs-2">
+    </div>
+	<div class="col-xs-8 container" align="center">
+        <h1> Enter traffic data</h1>
+
+        <form method="get" class="form-horizontal cam">
+            <div>
+                <label for="cam1">Camera 1: </label>
+                <input id="cam1" type="text" name="cam1" class="form-control">
+            </div>
+
+            <div>
+                <label for="cam2">Camera 2: </label>
+                <input id="cam2" type="text" name="cam2" class="form-control" >
+            </div>
+
+            <div>
+                <label for="cam3">Camera 3: </label>
+                <input id="cam3" type="text" name="cam3" class="form-control">
+            </div>
+
+            <div>
+                <label for="cam4">Camera 4: </label>
+                <input id="cam4" type="text" name="cam4" class="form-control" >
+            </div>
+            <br>
+            <center><button type="submit" class="btn btn-success">Submit</button></center>
+        </form>
+
+
+    </div>
+    <br><br>
+</body>
+</html>

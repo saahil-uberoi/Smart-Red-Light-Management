@@ -1,0 +1,91 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Analytic</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static 'jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <style>
+        td img {
+            display: block;
+            width: 100%;
+            height: 200px;
+        }
+
+        table {
+            width: 70%;
+            height: 50%;
+            /*border: 10px solid black ;*/
+        }
+
+        td {
+            width: 50%;
+            height: 50%;
+            padding: 20px;
+            /*border: 10px solid white;*/
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        .container {
+            min-height: 100%;
+            opacity: 0.8;
+            filter: alpha(opacity=92);
+            background-color: #000;
+            color: #ffffff;
+        }
+
+        body {
+            background: url("http://i.imgur.com/TNs1Nfj.jpg");
+        }
+        .margin {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <br>
+    <center>
+        <h2 align="center"><b>Images Collected by our Camera's :</b></h2>
+        <table>
+            <tr>
+                <td align="left"><h4 align="center">Cam1</h4><img src="{{ cam1 }}" class="img-rounded"></td>
+                <td align="left"><h4 align="center">Cam2</h4><img src="{{ cam2 }}" class="img-rounded"></td>
+            </tr>
+            <tr>
+                <td align="left"><h4 align="center">Cam3</h4><img src="{{ cam3 }}" class="img-rounded"></td>
+                <td align="left"><h4 align="center">Cam4</h4><img src="{{ cam4 }}" class="img-rounded"></td>
+            </tr>
+        </table>
+    </center>
+    <h2 align="center"><b>Analysis Report :</b></h2>
+
+    <div class="margin">
+        <h3>
+        <strong>
+            <li>{{ result1 }}</li>
+        </strong>
+        <strong>
+            <li>{{ result2 }}</li>
+        </strong>
+        <strong>
+            <li>{{ result3 }}</li>
+        </strong>
+        <strong>
+            <li>{{ result4 }}</li>
+        </strong>
+    </h3>
+    </div>
+
+</div>
+
+</body>
+</html>
+
